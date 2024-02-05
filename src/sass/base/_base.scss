@@ -1,0 +1,38 @@
+*, /* Universal selector. Applies to all elements */
+  *::after,
+  *::before {
+  margin: 0; /* Removes the default browser's margin */
+  padding: 0; /* Removes the default browser's padding */
+  box-sizing: inherit; /* Defines how the width and height of an element are calculated: should they include padding and borders, or not. Default is content-box*/
+}
+
+html {
+  /*
+    This defines what 1rem is.
+    Root font size acts as a reference for rem size for its childs, 1rem = 10px.
+    Default size is 16px.
+    */
+
+  font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+
+  @include respond(tab-land) {
+    font-size: 56.25%; //1 rem = 9px, 9px/16px = 56.25%
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%; //1 rem = 8px, 8px/16px = 50%
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%; //1rem = 12px, 12px/16px = 75%
+  }
+}
+
+body {
+  box-sizing: border-box; /* Includes in the total size the border, padding and margin */
+}
+
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
+}

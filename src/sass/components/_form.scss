@@ -1,0 +1,69 @@
+/* FORM */
+.form {
+
+  &__section {
+    padding: 0 2rem 0 1rem;
+
+    & > div > p,
+    & > div > h3 {
+      text-align: center;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  
+    & > div > p {
+      font-size: 1.2rem;
+    }
+  }
+ 
+  &__row {
+    @include clearfix;
+
+    > :not(::first-child){
+      margin-top: 1rem;
+    }
+
+    > :last-child {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__col {
+    float: left;
+  }
+
+  &__col--25 {
+    width: 25%;
+  }
+
+  &__col--75 {
+    width: 75%;
+  }
+
+  textarea {
+    height: 10rem;
+    max-height: 10rem;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    box-sizing: border-box;
+    resize: vertical;
+  }
+
+  input[type="checkbox"] {
+    margin-right: 1rem;
+  }
+
+  label {
+    margin-right: 3rem;
+    display: inline-block;
+    padding-bottom: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}

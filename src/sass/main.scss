@@ -1,0 +1,26 @@
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+@import "components/button";
+@import "components/categories";
+@import "components/form";
+@import "components/form-contact-contact";
+@import "components/form-contact-footer";
+@import "components/form-order-home";
+@import "components/form-order-order";
+@import "components/product-type";
+
+@import "layout/header";
+@import "layout/footer";
+
+@import "pages/about-us&bakery&cake-shop";
+@import "pages/contact";
+@import "pages/home";
+@import "pages/order";
+@import "pages/products";

@@ -1,0 +1,47 @@
+/* GENERAL ELEMENTS */
+.main-order {
+  @include grid(1, 0,
+    "header" 
+    "section" 
+    "footer");
+}
+
+/* SECTION */
+.section-order {
+  grid-area: section;
+  margin-left: auto;
+  margin-right: auto;
+  @include grid(3, 0, null);
+  grid-template-rows: 10% auto;
+  max-width: 80rem;
+
+  & input[type="text"],
+  & input[type="email"] {
+    border: 1px solid $color-black;
+  }
+
+  &__title {
+    background: $color-grey-light-3;
+    padding: 2rem 3rem 0 3rem;
+    grid-column: span 3;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: flex-start;
+
+    @include respond(phone) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__description {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    color: $color-secondary;
+  }
+}

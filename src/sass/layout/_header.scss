@@ -1,0 +1,206 @@
+/* HEADER */
+.header {
+  grid-area: header;
+
+  &__logo-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+  }
+
+  &__logo {
+    grid-column-start: 2;
+    height: 6rem;
+    padding-top: 0.9rem;
+    padding-bottom: 0.9rem;
+    margin-left: 0.5rem;
+  }
+
+  &__language-selector {
+    grid-column-start: 3;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-right: 5rem;
+  }
+
+  /* hero */
+  &__image {
+    max-width: 100vw;
+    position: relative; /* Relative position for the text-box. Reference for the childs inside the image */
+    background-size: cover; /* Adapts the image to the viewport */
+    background-position: top; /* Anchors top of the image */
+  }
+
+  &__image--large {
+    height: 30vh;
+    background-image: url("../img/cabecera.jpg");
+  }
+
+  &__image--small {
+    height: 10vh;
+    background-image: linear-gradient(to bottom, $color-header-gradient, $color-header-gradient),
+      url("../img/cabecera_dos.jpg");
+  }
+
+  &__text-box {
+    @include absCenter;
+    text-align: center;
+    line-height: 1.35;
+    padding: 0 6rem;
+    white-space: nowrap;
+  }
+
+  &__text-box--large {
+    top: 85%;
+    left: 50%;
+    font-size: 1.1rem;
+    color: $color-antiquewhite;
+    text-shadow: 0.15rem 0.15rem $color-siena;
+  }
+
+  &__text-box--small {
+    top: 65%; /* Relation to the parent element */
+    left: 50%; /* Relation to the parent element */
+    font-size: 0.8rem;
+    color: $color-white;
+  }
+}
+
+.h1--animated {
+  animation: moveInBottom 0.5s ease-out 0.75s; /* Shorthand. Last parameter -> Animation delay */
+  animation-fill-mode: backwards; /* Applies the states of 0% before the animation starts */
+  backface-visibility: hidden; /* Removes shake when there is an animation */
+}
+
+/* NAVIGAITON */
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-primary;
+
+  transition: max-height 0.2s ease-out;
+
+  &__links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    color: $color-white;
+  }
+
+  &__item {
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    &:not(:first-child) {
+      margin-left: 1rem;
+    }
+
+    &--active {
+      background-color: $color-primary-opacity;
+    }
+
+    &:hover {
+      background-color: $color-primary-darker;
+      transition: 0.3s;
+      transform: scale(1.05);
+    }
+  }
+
+  &__icon {
+    display: none;
+  }
+
+  &__link:link,
+  &__link:visited {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: inherit;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+  }
+
+  @include respond(phone) {
+    &__links {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+    }
+
+    &__item:not(.nav__item--active) {
+      display: none;
+      margin-left: 0;
+    }
+
+    &__item {
+      height: 5rem;
+      position: relative;
+
+      &--active {
+        padding-left: 10rem;
+        padding-right: 10rem;
+        margin-top: 1rem;
+        width: 100%;
+        display: flex;
+        > a {
+          @include absCenter;
+        }
+      }
+    }
+
+    &__icon {
+      display: block;
+      height: 2.5rem;
+      padding: 1rem 0 3rem 0;
+    }
+
+    &.responsive &__item {
+      padding-left: 10rem;
+      padding-right: 10rem;
+      margin-top: 1rem;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+}
+
+/* BREADCRUMBS */
+.breadcrumb {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 1rem;
+  list-style: none;
+  background-color: $color-grey-light-2;
+
+  &__item {
+    display: inline;
+
+    & a {
+      color: $color-secondary;
+      text-decoration: none;
+
+      &:hover {
+        color: $color-primary;
+        text-decoration: underline;
+      }
+    }
+
+    &:last-child a {
+      font-weight: 900;
+    }
+  }
+
+  &__item + &__item:before {
+    // Add a slash symbol (/) before/behind each list item
+    padding: 0.8rem;
+    content: "/\00a0";
+  }
+}

@@ -1,0 +1,72 @@
+.btn {
+    transition: all 0.2s;
+    cursor: pointer;
+    border: none;
+
+    &--spherical {
+        margin-right: 1rem;
+        background-color: $color-wheat;
+        border-radius: 2rem;
+        height: 3rem;
+        width: 3rem;
+    }
+
+    &--round-big {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 3.5rem;
+        width: 10rem;
+        margin-top: 1.5rem;
+        color: inherit;
+        border-radius: 20px;
+        text-transform: uppercase;
+
+        > a {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            color: $color-white;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+    }
+
+    &--round-small {
+        font-size: 1rem;
+        padding: 0.5rem 1rem 0.5rem 1rem;
+        border-radius: 20px;
+        color: $color-white;
+        background: $color-primary-darker;
+    }
+
+    &--submit {
+        margin-top: 1rem;
+        padding: 0.5rem 2rem;
+        background-color: $color-primary-darker;
+        font-size: 1rem;
+    }
+
+    &--order {
+        color: $color-secondary;
+        border-radius: 0.5rem;
+    }
+
+    &--contact {
+        color: inherit;
+        border-radius: 1rem;
+    }
+
+    &--yellow {
+        background: $color-primary-darker;
+    }
+
+    &--pink {
+        background: $color-tertiary;
+    }
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.2); // X Y Blur Color
+    }
+}

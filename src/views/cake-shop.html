@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- i18NEXT INTERNATIONALIZATION -->
+    <script src="https://unpkg.com/i18next/i18next.js"></script>
+
+    <!-- LEAFLET MAPS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+          integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+          crossorigin=""/>
+    <script defer
+            src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin="">
+    </script>
+
+    <!-- FONT-AWESOME ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet"> class="btn btn--round-small"
+
+    <link rel="stylesheet" href="../css/main.min.css">
+    <link rel="shortcut icon" type="image/png" href="../img/logotipo.png">
+    <title>Migas hermanas</title>
+</head>
+<body>
+
+<main class="main-aboutus-bakery-cakeshop">
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header__logo-box">
+            <img src="../img/logotipo.png" alt="Logo" class="header__logo">
+            <div class="header__language-selector">
+                <button id="btnChangeLanguagePortuguese" class="btn btn--spherical" title="Português">🇵🇹</button>
+                <button id="btnChangeLanguageSpanish" class="btn btn--spherical" title="Español">🇪🇸</button>
+            </div>
+        </div>
+        <nav class="nav" id="nav">
+            <ul class="nav__links">
+                <li class="nav__item">
+                    <a data-trans="common.home" class="nav__link" href="../../index.html">Inicio</a>
+                </li>
+                <li class="nav__item">
+                    <a data-trans="common.aboutUs" class="nav__link" href="about-us.html">Quiénes somos</a>
+                </li>
+                <li class="nav__item nav__item--active">
+                    <a data-trans="common.products" class="nav__link" href="products.html">Productos</a>
+                </li>
+                <li class="nav__item">
+                    <a data-trans="common.order" class="nav__link" href="order.html">Realizar pedido</a>
+                </li>
+                <li class="nav__item">
+                    <a data-trans="common.contact" class="nav__link" href="contact.html">Contáctanos</a>
+                </li>
+                <li class=" nav__icon">
+                    <a class="nav__link" id="btnShowHideNavItems" href="javascript:void(0);">
+                        <i class="fas fa-angle-double-down fa-2x" id="navIcon"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header__image header__image--small">
+            <div class="header__text-box header__text-box--small">
+                <h1 data-trans="common.cakeShop" class="h1--upper">Pastelería</h1>
+            </div>
+        </div>
+        <ul class="breadcrumb">
+            <li class="breadcrumb__item"><a data-trans="common.home" href="../../index.html">Inicio</a></li>
+            <li class="breadcrumb__item"><a data-trans="common.products" href="products.html">Productos</a></li>
+            <li class="breadcrumb__item"><a data-trans="common.cakeShop" href="cake-shop.html">Pastelería</a></li>
+        </ul>
+    </header>
+
+    <!-- SECTION CAKE-SHOP PRODUCTS -->
+    <section class="section-aboutus-bakery-cakeshop">
+        <article class="article-aboutus-bakery-cakeshop">
+            <div class="article-aboutus-bakery-cakeshop__content">
+                <h2 class="article-aboutus-bakery-cakeshop__title">Croissant</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi enim libero minus tenetur ullam!
+                    Aliquid
+                    deserunt exercitationem obcaecati similique sit tempore vel? Consectetur corporis dolor, illo
+                    inventore
+                    officia totam veritatis?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi enim libero minus tenetur ullam!
+                    Aliquid.</p>
+                <button class="btn btn--round-small" data-trans="common.includeInMyOrder">Incluir en mi pedido</button>
+            </div>
+            <img class="article-aboutus-bakery-cakeshop__image" src="../img/croissant.jpg" alt="Croissant">
+        </article>
+        <article class="article-aboutus-bakery-cakeshop">
+            <div class="article-aboutus-bakery-cakeshop__content">
+                <h2 class="article-aboutus-bakery-cakeshop__title">Rosquilla</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi enim libero minus tenetur ullam!
+                    Aliquid
+                    deserunt exercitationem obcaecati similique sit tempore vel? Consectetur corporis dolor, illo
+                    inventore
+                    officia totam veritatis?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi enim libero minus tenetur ullam!
+                    Aliquid.</p>
+                <button class="btn btn--round-small" data-trans="common.includeInMyOrder">Incluir en mi pedido</button>
+            </div>
+            <img class="article-aboutus-bakery-cakeshop__image" src="../img/donut_dos.jpg" alt="Donut">
+        </article>
+        <article class="article-aboutus-bakery-cakeshop">
+            <div class="article-aboutus-bakery-cakeshop__content">
+                <h2 class="article-aboutus-bakery-cakeshop__title">Berlina de chocolate</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi enim libero minus tenetur ullam!
+                    Aliquid
+                    deserunt exercitationem obcaecati similique sit tempore vel? Consectetur corporis dolor, illo
+                    inventore
+                    officia totam veritatis?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi enim libero minus tenetur ullam!
+                    Aliquid.</p>
+                <button class="btn btn--round-small" data-trans="common.includeInMyOrder">Incluir en mi pedido</button>
+            </div>
+            <img class="article-aboutus-bakery-cakeshop__image" src="../img/donut_uno.jpg" alt="Donut">
+        </article>
+        <article class="article-aboutus-bakery-cakeshop">
+            <div class="article-aboutus-bakery-cakeshop__content">
+                <h2 class="article-aboutus-bakery-cakeshop__title">Macaron</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi enim libero minus tenetur ullam!
+                    Aliquid
+                    deserunt exercitationem obcaecati similique sit tempore vel? Consectetur corporis dolor, illo
+                    inventore
+                    officia totam veritatis?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi enim libero minus tenetur ullam!
+                    Aliquid.</p>
+                <button class="btn btn--round-small" data-trans="common.includeInMyOrder">Incluir en mi pedido</button>
+            </div>
+            <img class="article-aboutus-bakery-cakeshop__image" src="../img/dulce_dos.jpg" alt="Dulce">
+        </article>
+        <article class="article-aboutus-bakery-cakeshop">
+            <div class="article-aboutus-bakery-cakeshop__content">
+                <h2 class="article-aboutus-bakery-cakeshop__title">Napolitana de chocolate</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi enim libero minus tenetur ullam!
+                    Aliquid
+                    deserunt exercitationem obcaecati similique sit tempore vel? Consectetur corporis dolor, illo
+                    inventore
+                    officia totam veritatis?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi enim libero minus tenetur ullam!
+                    Aliquid.</p>
+                <button class="btn btn--round-small" data-trans="common.includeInMyOrder">Incluir en mi pedido</button>
+            </div>
+            <img class="article-aboutus-bakery-cakeshop__image" src="../img/napolitana.jpg" alt="Napolitanas">
+        </article>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__section footer__section--1">
+            <div class="footer__title">
+                <h2 data-trans="common.contactUs" class="footer__description">Contacta con nosotros</h2>
+                <pre><a href="https://www.migashermanas.com" target="_blank">www.migashermanas.com</a>&Tab;·&Tab;<a
+                        href="mailto:info@migashermanas.com">info@migashermanas.com</a></pre>
+            </div>
+            <div class="footer__content">
+                <form class="form-contact-footer" id="formContactFooter">
+                    <div class="form__section form__section--contact-1">
+                        <div class="form__row">
+                            <div class="form__col form__col--25">
+                                <label data-trans="common.name" for="contactFooterInputName">Nombre</label>
+                            </div>
+                            <div class="form__col form__col--75">
+                                <input type="text" name="contactInputName" id="contactFooterInputName">
+                            </div>
+                        </div>
+                        <div class="form__row">
+                            <div class="form__col form__col--25">
+                                <label data-trans="common.surnames" for="contactFooterInputSurnames">Apellidos</label>
+                            </div>
+                            <div class="form__col form__col--75">
+                                <input type="text" name="contactInputSurnames" id="contactFooterInputSurnames">
+                            </div>
+                        </div>
+                        <div class="form__row">
+                            <div class="form__col form__col--25">
+                                <label data-trans="common.email" for="contactFooterInputEmail">Email</label>
+                            </div>
+                            <div class="form__col form__col--75">
+                                <input type="email" name="contactInputEmail" id="contactFooterInputEmail">
+                            </div>
+                        </div>
+                        <div class="form__row">
+                            <div class="form__col form__col--25">
+                                <label data-trans="common.comments" for="contactFooterInputComments">Comentarios</label>
+                            </div>
+                            <div class="form__col form__col--75">
+                                <textarea name="contactInputComments" id="contactFooterInputComments"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form__section form__section--contact-2">
+                        <label data-trans="common.iAcceptTermsOfService"><input type="checkbox" name="contactTermsCheckBox"/>Acepto el aviso legal</label>
+                        <input data-trans="common.send" class="btn btn--submit btn--contact" type="submit" name="contactSubmit" value="Enviar">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="footer__section footer__section--2">
+            <div class="footer__title">
+                <h2 data-trans="common.followUs" class="footer__description">Síguenos en:</h2>
+            </div>
+            <div class="footer__content">
+                <a href="https://www.facebook.com/migashermanas" target="_blank">
+                    <img src="../img/facebook.png" alt="Facebook">
+                </a>
+                <a href="https://twitter.com/migashermanas" target="_blank">
+                    <img src="../img/001-twitter.png" alt="Twitter">
+                </a>
+                <a href="https://instagram.com/migashermanas" target="_blank">
+                    <img src="../img/002-instagram.png" alt="Instagram">
+                </a>
+            </div>
+        </div>
+        <div class="footer__section footer__section--3">
+            <div class="footer__title">
+                <h2 data-trans="common.location" class="footer__description">Localización</h2>
+                <p>Av. Luis Espada, nº56 bajo, 32600 Verín, provincia de Ourense</p>
+            </div>
+            <div class="footer__content">
+                <div id="map"></div>
+            </div>
+        </div>
+    </footer>
+
+</main>
+<script type="module" src="../js/i18next.js"></script>
+<script type="module" src="../js/leaflet.js"></script>
+<script type="module" src="../js/controllers/controller.js"></script>
+</body>
+</html>

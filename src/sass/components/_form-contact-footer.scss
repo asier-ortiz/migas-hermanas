@@ -1,0 +1,17 @@
+.form-contact-footer {
+    @extend .form;
+
+    .form__section {
+        &--contact-1 {
+            max-width: 40rem;
+        }
+
+        &--contact-2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 2rem;
+            max-width: 35rem;
+        }
+    }
+}
